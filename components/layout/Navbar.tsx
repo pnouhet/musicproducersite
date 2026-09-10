@@ -29,7 +29,6 @@
 
 "use client"; // Indispensable pour les hooks (useState, useRouter)
 
-import Link from "next/link";
 import { ShoppingCart, Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef, useEffect } from "react";

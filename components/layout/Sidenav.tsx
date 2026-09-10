@@ -1,6 +1,4 @@
 import React from "react";
-import { Button } from "../ui/button";
-import { Search, ShoppingCart, Menu } from "lucide-react";
 import Link from "next/link";
 
 export default function SideNav() {

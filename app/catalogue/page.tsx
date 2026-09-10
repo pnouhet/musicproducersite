@@ -39,12 +39,15 @@ function ShopContent() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Mise à jour si l'URL change (ex: nouvelle recherche depuis la navbar)
-  useEffect(() => {
+  // Mise à jour si l'URL change (ex: nouvelle recherche depuis la navbar).
+  // On ajuste l'état pendant le rendu plutôt que dans un effet (cf. react.dev/learn/you-might-not-need-an-effect)
+  const [prevSearchQuery, setPrevSearchQuery] = useState(initialSearchQuery);
+  if (initialSearchQuery !== prevSearchQuery) {
+    setPrevSearchQuery(initialSearchQuery);
     setSearchFilter(initialSearchQuery);
     // Si une recherche est faite, on réinitialise les catégories pour ne pas trop restreindre
     if (initialSearchQuery) setSelectedCategories([]);
-  }, [initialSearchQuery]);
+  }
 
   // Coche / décoche une catégorie
   const toggleCategory = (cat: string) => {
@@ -102,7 +105,7 @@ function ShopContent() {
           <span className="text-zinc-400 text-sm">Filtres actifs :</span>
           {searchFilter && (
             <span className="flex items-center gap-2 px-3 py-1 bg-white/10 text-white text-sm border border-white/20">
-              "{searchFilter}"
+              &quot;{searchFilter}&quot;
               <button onClick={() => setSearchFilter("")} className="hover:text-red-400">
                 <X size={14} />
               </button>

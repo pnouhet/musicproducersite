@@ -1,5 +1,4 @@
 import Hero from "@/components/home/Hero";
-import { CardImage } from "@/components/products/card2";
 import ProductCard from "@/components/products/ProductCard";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/data";

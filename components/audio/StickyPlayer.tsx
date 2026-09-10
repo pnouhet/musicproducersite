@@ -7,8 +7,6 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { Product } from "@/lib/data";
 
 export default function StickyPlayer() {
   const { currentTrack, isPlaying, toggle, pause } = usePlayerStore();

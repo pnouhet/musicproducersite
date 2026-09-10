@@ -115,7 +115,6 @@ return (
         }
       `}</style>
 
-      {/* @ts-ignore */}
       <shader-art
         autoplay
         dangerouslySetInnerHTML={{ __html: shaderHTML }}

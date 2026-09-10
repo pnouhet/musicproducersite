@@ -4,8 +4,7 @@ import { useParams } from "next/navigation";
 import { products } from "@/lib/data";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Play, Pause, ShoppingCart, Check, ShieldCheck, Zap } from "lucide-react";
-import { usePlayerStore } from "@/store/usePlayerStore";
+import { ShoppingCart, Check, ShieldCheck, Zap } from "lucide-react";
 import Waveform from "@/components/audio/Waveform";
 import SamplePreview from "@/components/audio/SamplePreview";
 import Link from "next/link";
@@ -13,7 +12,6 @@ import { ArrowLeft, Package, PackageOpen, AudioLines } from "lucide-react";
 
 export default function ProductPage() {
   const params = useParams();
-  const { currentTrack, isPlaying, play } = usePlayerStore();
   
   // On cherche le produit qui correspond à l'ID de l'URL
   const product = products.find((p) => p.id === params.id);
@@ -22,8 +20,6 @@ export default function ProductPage() {
     return <div className="text-center py-20 text-white">Produit introuvable.</div>;
   }
 
-  const isCurrent = currentTrack?.id === product.id;
-  const isActive = isCurrent && isPlaying;
 
   return (
     <div className="container mx-auto px-4 py-12 pb-40">

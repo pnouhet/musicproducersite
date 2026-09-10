@@ -6,22 +6,22 @@ Le site fait appels a l'API de Pexels pour les photos et Pixabay pour les extrai
 
 ### Démo : [musicproducersite.vercel.app](https://musicproducersite.vercel.app/)
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - Exploration de packs de samples et de presets
 - Écoute d'extraits audio
 - Interface design, user-friendly et responsive
 - Médias dynamiques provenant de Pexels (images) et Pixabay (pistes audio)
 
-## 🛠️ Stacks Utilisés
+## Stacks Utilisés
 
 - **Framework :** NextJS / Typescript
 - **Styling :** Tailwind CSS / Vanilla CSS
 - **Design System :** Shadcn UI
 
-## ⚙️ Installation & Démarrage local
+## Installation & Démarrage local
 
-Pour le lancer localement le projet, suivez les étapes ci-dessous
+Pour lancer localement le projet, suivez les étapes ci-dessous
 
 **1. Clonez le repo**  
 ```bash

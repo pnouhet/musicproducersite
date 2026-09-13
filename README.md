@@ -25,7 +25,7 @@ Pour lancer localement le projet, suivez les étapes ci-dessous
 
 **1. Clonez le repo**  
 ```bash
-git clone https://github.com/pnouhet/musicproducersite
+git clone https://github.com/pnouhet/musicproducersite.git
 cd musicproducersite
 ```  
 2. Installez les dépendances
